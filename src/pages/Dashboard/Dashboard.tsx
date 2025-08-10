@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { Navbar } from "@/components/Layout/Navbar";
 import { Footer } from "@/components/Layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -130,13 +130,17 @@ export default function Dashboard() {
               </p>
             </div>
             <div className="flex space-x-2">
-              <Button variant="outline">
-                <Plus className="h-4 w-4 mr-2" />
-                Create Asset
+              <Button variant="outline" asChild>
+                <Link to="/assets/create">
+                  <Plus className="h-4 w-4 mr-2" />
+                  Create Asset
+                </Link>
               </Button>
-              <Button variant="crypto">
-                <Target className="h-4 w-4 mr-2" />
-                New Campaign
+              <Button variant="crypto" asChild>
+                <Link to="/campaigns/create">
+                  <Target className="h-4 w-4 mr-2" />
+                  New Campaign
+                </Link>
               </Button>
             </div>
           </div>

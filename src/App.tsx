@@ -14,12 +14,15 @@ import ConnectWallet from "./pages/Auth/ConnectWallet";
 
 // Main App Pages  
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Profile from "./pages/Profile/Profile";
 import Assets from "./pages/Assets/Assets";
 import AssetDetail from "./pages/Assets/AssetDetail";
+import CreateAsset from "./pages/Assets/CreateAsset";
 import Bids from "./pages/Bids/Bids";
 import BidDetail from "./pages/Bids/BidDetail";
 import Campaigns from "./pages/Campaigns/Campaigns";
 import CampaignDetail from "./pages/Campaigns/CampaignDetail";
+import CreateCampaign from "./pages/Campaigns/CreateCampaign";
 import Groups from "./pages/Groups/Groups";
 import GroupDetail from "./pages/Groups/GroupDetail";
 import Proposals from "./pages/Groups/Proposals";
@@ -55,10 +58,13 @@ const App = () => (
             
             {/* Dashboard */}
             <Route path="/u/:username" element={<Dashboard />} />
+            {/* Profile */}
+            <Route path="/profile" element={<Profile />} />
             
             {/* Assets */}
             <Route path="/assets" element={<Assets />} />
             <Route path="/assets/:id" element={<AssetDetail />} />
+            <Route path="/assets/create" element={<CreateAsset />} />
             
             {/* Bids */}
             <Route path="/bids" element={<Bids />} />
@@ -67,6 +73,7 @@ const App = () => (
             {/* Campaigns */}
             <Route path="/campaigns" element={<Campaigns />} />
             <Route path="/campaigns/:id" element={<CampaignDetail />} />
+            <Route path="/campaigns/create" element={<CreateCampaign />} />
             
             {/* Groups/DAOs */}
             <Route path="/groups" element={<Groups />} />
